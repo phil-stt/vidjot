@@ -1,0 +1,19 @@
+{
+  "name": "vidjot",
+  "version": "1.0.0",
+  "description": "app to create vids",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon -r dotenv/config app.js dotenv_config_path=.env.development",
+    "start-prod": "node -r dotenv/config app.js dotenv_config_path=.env.production"
+  },
+  "author": "Phil",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "mongoose": "^6.5.2"
+  }
+}
