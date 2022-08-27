@@ -3,7 +3,7 @@
     <div class="card card-body">
       <img class="logo" src="/img/logo.png">
       <h3 class="text-center">Account Register</h3>
-      <form action="/users/register" method="post">
+      <form action="/users/register" name="regform" method="post">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" name="name" value="{{name}}" required>
@@ -20,8 +20,13 @@
           <label for="password2">Confirm Password</label>
           <input type="password" name="password2" class="form-control" value="{{password2}}" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" data-sitekey="6LdYhLIhAAAAALSvtl1RDGJS12ZI7GDJqtenjBb9" data-callback='onSubmit' data-action='submit'>Submit</button>
       </form>
     </div>
   </div>
 </div>
+<script>
+  function onSubmit(token) {
+    document.getElementById("regform").submit();
+  }
+</script>
